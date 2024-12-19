@@ -26,7 +26,7 @@ public class Board
         return true;
     }
 
-    public Maybe<string> IsGameOver(IPlayer currentPlayer)
+    public virtual Maybe<string> IsGameOver(IPlayer currentPlayer)
     {
         if (IsGameBoardWin())
         {
@@ -136,4 +136,9 @@ public class Board
 
     private bool IsGameBoardFull()
         => grid.All(cell => cell.Value.HasValue);
+
+    public bool IsBoardEmpty()
+    {
+        return grid.All(cell => !cell.Value.HasValue);
+    }
 }

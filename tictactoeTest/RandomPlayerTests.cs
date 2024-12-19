@@ -2,6 +2,8 @@ using Xunit;
 using TicTacToe;
 using TicTacToe.Players;
 using TicTacToe.Boards;
+using Moq;
+using TicTacToe.Display;
 
 namespace TicTacToe.Tests
 {
